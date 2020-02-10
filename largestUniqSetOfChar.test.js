@@ -1,8 +1,13 @@
 const largestUniqSetOfChar = require('./index.js');
 
-const paragraph =
-    'If you want to jumpstart the process of talking to us about this role, here’s a little challenge: write a program that outputs the largest unique set of characters that can be removed from this paragraph without letting its length drop below 50.';
+const paragraph = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccd ';
 
 test('should output the largest unique set of characters that can be removed from a paragraph without letting its length drop below 50', () => {
-    expect(largestUniqSetOfChar(paragraph)).toEqual(['H', 'i', '!', ' ']);
+	expect(largestUniqSetOfChar(paragraph).sort()).toEqual(
+		['b', 'c', 'd', ' '].sort()
+	);
+});
+
+test('should output empty array from a paragraph with length < 50', () => {
+	expect(largestUniqSetOfChar('aaa')).toEqual([]);
 });
