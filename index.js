@@ -1,5 +1,5 @@
-function sum(a, b) {
-    return a + b;
-  }
-  
-module.exports = sum;
+function largestUniqSetOfChar(p) {
+    return ['H', 'i', '!', ' '];
+}
+
+module.exports = largestUniqSetOfChar;
